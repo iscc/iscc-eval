@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "iscc-eval"
+version = "0.1.0"
+description = "ISCC Performance Evaluation"
+authors = ["Titusz Pan <tp@py7.de>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+iscc-eval = 'iscc_eval.cli:cli'
+
+[tool.poetry.dependencies]
+python = "^3.6"
+iscc = {version = "1.1.0a1", extras = ["turbo"]}
+iscc-samples = "^0.2.0"
+py-cpuinfo = "^7.0.0"
+codetiming = "^1.2.0"
+humanize = "^3.2.0"
+typer = "^0.3.2"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^20.8b1", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
