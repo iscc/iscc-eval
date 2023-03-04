@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import iscc
+import iscc_core
 import platform
 import cpuinfo
 
@@ -24,7 +24,7 @@ def system_info(name=""):
         platform.python_implementation(),
         platform.python_version(),
         platform.python_compiler(),
-        iscc.__version__,
+        iscc_core.__version__,
     )
     return sinfo
 

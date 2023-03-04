@@ -3,10 +3,10 @@ from codetiming import Timer
 from typing import Callable, List, Optional
 import typer
 from pathlib import Path
-import iscc
 from iscc_eval.utils import system_info
 import iscc_samples
 from humanize import naturalsize as nsize
+import iscc_sdk as idk
 
 cli = typer.Typer(
     add_completion=False,
@@ -19,7 +19,7 @@ def instance_code(path: Optional[Path] = typer.Argument(None)):
     total, files = get_files(path)
     typer.echo(system_info("Instance-Code"))
     typer.echo(f"Benchmarking with {len(files)} files (total size: {nsize(total)}).")
-    result = speed_benchmark(files, iscc.code_instance, total)
+    result = speed_benchmark(files, idk.code_instance, total)
     typer.echo(result)
 
 
@@ -29,7 +29,7 @@ def data_code(path: Optional[Path] = typer.Argument(None)):
     total, files = get_files(path)
     typer.echo(system_info("Instance-Code"))
     typer.echo(f"Benchmarking with {len(files)} files (total size: {nsize(total)}).")
-    result = speed_benchmark(files, iscc.code_data, total)
+    result = speed_benchmark(files, idk.code_data, total)
     typer.echo(result)
 
 
