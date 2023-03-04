@@ -1,14 +1,31 @@
 # -*- coding: utf-8 -*-
+from pathlib import Path
+from typing import Optional
 import iscc_core
 import platform
 import cpuinfo
+import iscc_samples
+
+__all__ = [
+    "get_files",
+    "system_info",
+]
+
+
+def get_files(path: Optional[Path] = None):
+    if path is None:
+        files = list(iscc_samples.all())
+    else:
+        files = [p for p in path.rglob("*") if p.is_file()]
+    total = sum(f.stat().st_size for f in files)
+    return total, files
 
 
 def system_info(name=""):
     """Printable system info"""
     cinfo = cpuinfo.get_cpu_info()
     sinfo = (
-        "ISCC Performance Benchmark - {}\n"
+        "\n[bold]ISCC Performance Benchmark - {}[/bold]\n"
         "==========================================================================\n"
         "CPU:     {}\n"
         "Cores:   {}\n"
@@ -27,7 +44,3 @@ def system_info(name=""):
         iscc_core.__version__,
     )
     return sinfo
-
-
-if __name__ == "__main__":
-    print(system_info())

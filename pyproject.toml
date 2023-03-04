@@ -17,7 +17,7 @@ iscc-samples = "*"
 py-cpuinfo = "*"
 codetiming = "*"
 humanize = "*"
-typer = "*"
+typer = {extras = ["all"], version = "^0.7.0"}
 
 [tool.poetry.dev-dependencies]
 black = "*"
