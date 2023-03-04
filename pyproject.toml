@@ -3,7 +3,7 @@ name = "iscc-eval"
 version = "0.2.0"
 description = "ISCC Performance Evaluation"
 authors = ["Titusz Pan <tp@py7.de>"]
-license = "MIT"
+license = "Apache-2.0"
 readme = "README.md"
 
 [tool.poetry.scripts]
