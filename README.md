@@ -59,8 +59,8 @@ To evaluate Content-Code matching accuracy you need to prepare ground truth data
 
 The `match` command will generate Content-Codes for all media assets in `mydata` recursively and
 create ground truth data (expected results) from the `cluster` subfolders.
-The first file from each `cluster` folder will be querried against all other (non-query) files of
-the dataset. The query resuls are then compared against the expected results (ground truth).
+The first file from each `cluster`-folder will be queried against all other (non-query) files of
+the dataset. The query results are then compared against the expected results (ground truth).
 
 Evaluate the matching accuracy with the following command:
 
