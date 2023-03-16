@@ -45,7 +45,7 @@ jobs:
     - name: Build iscc-eval
       run: poetry run python build.py
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: iscc-eval-${{ matrix.os }}
         path: dist/*
