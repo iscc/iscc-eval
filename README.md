@@ -46,14 +46,14 @@ To evaluate Content-Code matching accuracy you need to prepare ground truth data
 #### Evaluation data directory structure
 
     mydata
-    ├── cluster1                # A collections of media assets that should match
+    ├── cluster1                # Subfolders are collections of media assets that should match
     │   ├── 0_original.mp3      # The first file will be the query file (lexicographic sorting)
-    │   ├── variation_1.mp3     # Modified version that should match against the query file
+    │   ├── variation_1.mp3     # A modified version that should match against the query file
     │   └── ...                 # Create as many modified versions as you like
     ├── cluster_x               # A cluster folder can have any name
-    │   ├── file1.mp3           # Sample files in clusters can also have any name
+    │   ├── file1.mp3           # Files in cluster folders can have any name
     │   └── ...                 # A cluster folder may have only one file (query with no match)
-    ├── sample1.mp3             # Files that should NOT match against any of the queries
+    ├── sample1.mp3             # Top-Level files that should NOT match against any of the queries
     ├── sample2.mp3
     └── ...
 
