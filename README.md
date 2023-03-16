@@ -1,11 +1,11 @@
 # ISCC Performance Evaluation
 
-## Requirements:
+## Development Requirements:
 
-- [Python](https://www.python.org/) > 3.6
+- [Python](https://www.python.org/)  3.11
 - [Poetry](https://pypi.org/project/poetry/)
 
-## Installation:
+## Development Installation:
 
 ```shell
 $ git clone https://github.com/iscc/iscc-eval.git

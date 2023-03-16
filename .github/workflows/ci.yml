@@ -1,6 +1,6 @@
 name: Build
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   Build:
@@ -22,6 +22,10 @@ jobs:
       uses: abatilo/actions-poetry@v2.0.0
       with:
         poetry-version: 1.4.0
+
+    - name: Disable Poetry Modern Installer
+      if: matrix.os == 'windows-2019'
+      run: poetry config installer.modern-installation false
 
     - name: Install iscc-eval dependencies
       run: poetry install
