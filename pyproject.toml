@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "iscc-eval"
-version = "0.2.0"
+version = "0.3.0"
 description = "ISCC Performance Evaluation"
 authors = ["Titusz Pan <tp@py7.de>"]
 license = "Apache-2.0"
@@ -9,24 +9,28 @@ readme = "README.md"
 [tool.poetry.scripts]
 iscc-eval = 'iscc_eval.cli:cli'
 
+
 [tool.poetry.dependencies]
-python = "^3.10"
-cython = "*"
-iscc-sdk = "*"
+python = ">=3.11,<3.12"
+iscc-sdk = "^0.5.4"
 iscc-samples = "*"
 py-cpuinfo = "*"
 codetiming = "*"
 humanize = "*"
 typer = {extras = ["all"], version = "^0.7.0"}
+diskcache = "^5.4.0"
+requests = "^2.28.2"
+
 
 [tool.poetry.dev-dependencies]
 black = "*"
-pytest = "*"
+pyinstaller = "^5.9.0"
+
 
 [tool.black]
 line-length = 100
-target-version = ['py310']
+target-version = ['py311']
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core", "Cython"]
 build-backend = "poetry.core.masonry.api"
