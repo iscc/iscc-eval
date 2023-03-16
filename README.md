@@ -43,7 +43,7 @@ To evaluate Content-Code matching accuracy you need to prepare ground truth data
   - In the subdirectory create 0 or more variations of the media asset that should be matched
   - Repeat for as many of the assets from the top-level directory as you like
 
-#### Evaluation data directory strucure
+#### Evaluation data directory structure
 
     mydata
     ├── cluster1                # A collections of media assets that should match
