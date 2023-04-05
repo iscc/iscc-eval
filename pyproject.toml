@@ -12,7 +12,7 @@ iscc-eval = 'iscc_eval.cli:cli'
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
-iscc-sdk = "^0.5.4"
+iscc-sdk = "^0.5"
 iscc-samples = "*"
 py-cpuinfo = "*"
 codetiming = "*"
