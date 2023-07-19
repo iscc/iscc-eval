@@ -1,5 +1,8 @@
 # ISCC Performance Evaluation
 
+> **Wargning**
+> This project is superseeded by https://github.com/iscc/twinspect
+
 ## Development Requirements:
 
 - [Python](https://www.python.org/)  3.11
